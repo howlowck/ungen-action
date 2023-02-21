@@ -1,0 +1,29 @@
+# action.yml
+name: 'Ungen Action'
+description: 'Run Ungen in a GitHub Action'
+inputs:
+  inputDir:
+    description: 'Path to the input directory'
+    required: true
+  outputDir:
+    description: 'Path to the output directory'
+    required: true
+  keep:
+    description: 'keep UNGEN lines'
+    required: true
+    default: 'false'
+  variables:
+    description: 'variables to be used in UNGEN'
+    required: false
+    default: ''
+outputs:
+  pathToOutput:
+    description: 'Path to the generated Output'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.inputDir }}
+    - ${{ inputs.outputDir }}
+    - ${{ inputs.keep }}
+    - ${{ inputs.variables }}

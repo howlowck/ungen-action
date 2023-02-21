@@ -1,0 +1,17 @@
+{
+  // UNGEN: replace "simple-nodejs" with var.appName
+  "name": "simple-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  // UNGEN: if var.useTypescript then replace ".js" with ".ts" 
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

@@ -1,0 +1,21 @@
+on: [push]
+
+jobs:
+  ungen_job:
+    runs-on: ubuntu-latest
+    name: A job to run ungen
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Ungen action step
+        uses: ./
+        id: ungen
+        with:
+          inputDir: 'examples/simple-nodejs'
+          outputDir: 'generated'
+          keep: 'false'
+          variables: |
+            useTypescript=false
+            appName=MyNewApp
+      - name: Get the output path
+        run: echo "The path to output is ${{ steps.ungen.outputs.pathToOutput }}"
