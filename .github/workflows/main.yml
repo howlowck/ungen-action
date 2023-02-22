@@ -17,5 +17,6 @@ jobs:
           variables: |
             useTypescript=false
             appName=MyNewApp
+            includeExtraFeature=false
       - name: Get the output path
         run: echo "The path to output is ${{ steps.ungen.outputs.pathToOutput }}"
