@@ -12,7 +12,7 @@ done
 
 echo "vars: $varArgs"
 
-ungen -i $GITHUB_WORKSPACE/$1 -o $GITHUB_WORKSPACE/$2 $keep $varArgs -zip
+ungen -i $1 -o $2 $keep $varArgs -zip
 
 file=$(basename $2).zip
 
