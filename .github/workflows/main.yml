@@ -1,3 +1,4 @@
+name: Sample Ungen Action
 on:
   push:
     branches:
@@ -22,5 +23,14 @@ jobs:
             useTypescript=false
             appName=MyNewApp
             includeExtraFeature=false
+      - name: Create GitHub Repo
+        uses: howlowck/create-repo-action@v1.0
+        with:
+          zipPath: 'generated.zip'
+          repoName: 'test-repo'
+          repoDescription: 'My repo description'
+          repoVisibility: 'private'
+          securityToken: ${{ secrets.ORG_TOKEN }}
+
       - name: Get the output path
         run: echo "The path to output is ${{ steps.ungen.outputs.pathToOutput }}"
