@@ -16,9 +16,9 @@ jobs:
         uses: ./
         id: ungen
         with:
-          inputDir: 'examples/simple-nodejs'
-          outputDir: 'generated'
-          keep: 'false'
+          inputDir: "examples/simple-nodejs"
+          outputDir: "generated"
+          keep: "false"
           variables: |
             useTypescript=false
             appName=MyNewApp
@@ -26,10 +26,10 @@ jobs:
       - name: Create GitHub Repo
         uses: howlowck/create-repo-action@v1.0
         with:
-          zipPath: 'generated.zip'
-          repoName: 'test-repo'
-          repoDescription: 'My repo description'
-          repoVisibility: 'private'
+          zipPath: "generated.zip"
+          repoName: "test-repo"
+          repoDescription: "My repo description"
+          repoVisibility: "private"
           securityToken: ${{ secrets.ORG_TOKEN }}
 
       - name: Get the output path

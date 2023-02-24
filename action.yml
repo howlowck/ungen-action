@@ -1,27 +1,31 @@
 # action.yml
-name: 'Ungen Action'
-description: 'Run Ungen in a GitHub Action'
+name: "Ungen Action"
+description: "Run Ungen in a GitHub Action"
+author: "howlowck"
+branding:
+  icon: "code"
+  color: "blue"
 inputs:
   inputDir:
-    description: 'Path to the input directory'
+    description: "Path to the input directory"
     required: true
   outputDir:
-    description: 'Path to the output directory'
+    description: "Path to the output directory"
     required: true
   keep:
-    description: 'keep UNGEN lines'
+    description: "keep UNGEN lines"
     required: true
-    default: 'false'
+    default: "false"
   variables:
-    description: 'variables to be used in UNGEN'
+    description: "variables to be used in UNGEN"
     required: false
-    default: ''
+    default: ""
 outputs:
   pathToOutput:
-    description: 'Path to the generated Output'
+    description: "Path to the generated Output"
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: "docker"
+  image: "Dockerfile"
   args:
     - ${{ inputs.inputDir }}
     - ${{ inputs.outputDir }}
