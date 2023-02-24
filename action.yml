@@ -14,7 +14,7 @@ inputs:
     required: true
   keep:
     description: "keep UNGEN lines"
-    required: true
+    required: false
     default: "false"
   variables:
     description: "variables to be used in UNGEN"
