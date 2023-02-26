@@ -30,6 +30,8 @@ outputs:
 runs:
   using: "docker"
   image: "Dockerfile"
+  env:
+    UNGEN_VERSION: ${{ inputs.ungenVersion }}
   args:
     - ${{ inputs.inputDir }}
     - ${{ inputs.outputDir }}
