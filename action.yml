@@ -6,6 +6,10 @@ branding:
   icon: "code"
   color: "blue"
 inputs:
+  ungenVersion:
+    description: "Ungen Version"
+    required: false
+    default: "latest"
   inputDir:
     description: "Path to the input directory"
     required: true
