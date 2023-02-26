@@ -28,9 +28,11 @@ outputs:
   pathToOutput:
     description: "Path to the generated Output"
 runs:
+  env:
+    UNGEN_VERSION: ${{ inputs.ungenVersion }}
   using: "docker"
-  image: "howlowck/ungen:${{ inputs.ungenVersion }}"
-  entrypoint: "./entrypoint.sh"
+  image: "docker://howlowck/ungen:${{ inputs.ungenVersion }}"
+  entrypoint: "entrypoint.sh"
   args:
     - ${{ inputs.inputDir }}
     - ${{ inputs.outputDir }}
