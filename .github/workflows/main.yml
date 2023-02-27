@@ -16,6 +16,7 @@ jobs:
           inputDir: "examples/simple-nodejs"
           outputDir: "generated"
           keep: "false"
+          ungenVersion: v0.2.1
           variables: |
             useTypescript=false
             appName=MyNewApp
