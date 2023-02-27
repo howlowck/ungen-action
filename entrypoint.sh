@@ -12,7 +12,7 @@ done
 
 echo "vars: $varArgs"
 
-[[ "$5" == "latest"]]
+if [ "$5" == "latest" ]
 then
     echo "Using ungen latest"
     ungen -i $1 -o $2 $keep $varArgs -zip
