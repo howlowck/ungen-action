@@ -17,7 +17,7 @@ jobs:
           outputDir: "generated"
           keep: "false"
           ungenVersion: v0.2.1
-          variables: |
+          variables: |-
             useTypescript=false
             appName="My New App"
             includeExtraFeature=false
