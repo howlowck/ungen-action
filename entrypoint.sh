@@ -5,12 +5,9 @@ vars="${4}"
 
 varArgs=""
 
-IFS=$'\n'
-
-for line in $var; do
-    let varArgs="$varArgs -var $line"
-done
-
+while IFS= read -r line; do
+    varArgs="$varArgs -var $line"
+done <<< "$vars"
 
 echo "vars: $varArgs"
 
