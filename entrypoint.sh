@@ -1,4 +1,5 @@
-#!/bin/sh -l
+#!/usr/bin/env bash
+
 vars="${4}"
 
 [[ "$3" == "false" ]] && keep="" || keep="-keep"
