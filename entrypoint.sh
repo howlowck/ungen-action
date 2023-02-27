@@ -15,9 +15,11 @@ echo "vars: $varArgs"
 if [ "$5" == "latest" ]
 then
     echo "Using ungen latest"
+    echo "ungen -i $1 -o $2 $keep -zip $varArgs"
     ungen -i $1 -o $2 $keep -zip $varArgs 
 else
     echo "Using ungen version $5"
+    echo "./ungen -i $1 -o $2 $keep -zip $varArgs"
     curl -o ungen.tar.gz -L https://github.com/howlowck/ungen/releases/download/$5/ungen_Linux_x86_64.tar.gz
     tar -xvzf ungen.tar.gz
     ./ungen -i $1 -o $2 $keep -zip $varArgs 
