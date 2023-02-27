@@ -8,7 +8,7 @@ varArgs=""
 IFS=$'\n'
 
 for line in $var; do
-    varArgs="$varArgs -var $line"
+    let varArgs="$varArgs -var $line"
 done
 
 
