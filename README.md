@@ -4,12 +4,13 @@ This action runs [Ungen](https://github.com/howlowck/ungen) in GitHub Workflow a
 
 ## Inputs
 
-| Name        | Required | Defaults | Description                                         |
-| ----------- | -------- | -------- | --------------------------------------------------- |
-| `inputDir`  | Yes      | NA       | The Input Directory.                                |
-| `outputDir` | Yes      | NA       | The Output Directory (name of the zip file)         |
-| `keep`      | No       | `false`  | Whether to keep the UNGEN lines.                    |
-| `variables` | No       | `""`     | list of `<key>=<value>` pairs. Separated by newline |
+| Name           | Required | Defaults   | Description                                            |
+| -------------- | -------- | ---------- | ------------------------------------------------------ |
+| `inputDir`     | Yes      | NA         | The Input Directory. (for current directory, use ".")  |
+| `outputDir`    | Yes      | NA         | The Output Directory (name of the zip file)            |
+| `keep`         | No       | `false`    | Whether to keep the UNGEN lines.                       |
+| `variables`    | No       | `""`       | list of `<key>=<value>` pairs. Separated by newline    |
+| `ungenVersion` | No       | `"latest"` | The version of Ungen you like to use (prefix with "v") |
 
 ## Outputs
 
