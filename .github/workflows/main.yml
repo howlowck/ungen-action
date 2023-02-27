@@ -19,7 +19,7 @@ jobs:
           ungenVersion: v0.2.1
           variables: |
             useTypescript=false
-            appName=MyNewApp
+            appName="My New App"
             includeExtraFeature=false
       - name: Create GitHub Repo
         uses: howlowck/create-repo-action@v1.0
