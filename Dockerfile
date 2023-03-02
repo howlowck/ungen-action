@@ -1,7 +1,7 @@
 # Container image that runs your code
 FROM howlowck/ungen:latest
 
-RUN apt-get update && apt-get install -y curl bash
+RUN apk add curl bash
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
